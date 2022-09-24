@@ -1,5 +1,4 @@
-//TODO:
-// MAKE IT FUNCTIONAL AND REFACTOR
+// FUNCTIONS
 
 Array.prototype.contains = function (array) {
     return array.every(function (item) {
@@ -7,13 +6,18 @@ Array.prototype.contains = function (array) {
     }, this);
 }
 
+// VARIABLES
+
 const btns = document.querySelectorAll(".btn");
 const btnClear = document.querySelector(".btnClear");
 const filter = document.getElementById("filter");
 const filterList = document.querySelector(".filterList");
 
 // FILTERING ARRAY
+
 let tagsArray = [];
+
+// FUNCTIONALITY
 
 // what happens when you click a filtering button 
 btns.forEach((btn) => {
@@ -62,7 +66,6 @@ btns.forEach((btn) => {
                     divsArray.push(cbtn.textContent);
 
                 });
-                console.log(divsArray);
                 if (divsArray.contains(tagsArray)) {
                     container.classList.remove("hide");
                 }
@@ -81,7 +84,6 @@ btns.forEach((btn) => {
                 divsArray.push(cbtn.textContent);
                 
             });
-            console.log(divsArray);
             if (!divsArray.contains(tagsArray)) {
                 container.classList.add("hide");
             }
