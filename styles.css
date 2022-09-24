@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: rgb(239, 246, 246);
+    --box-bg: rgb(250, 250, 250);
+    --green: rgb(92, 165, 165);
+    --dark-green: rgb(43, 57, 57);
+    --green-text: rgb(124, 143, 143);
+}
+
+/* general styles */
+
+header {
+    background-image: url(images/bg-header-desktop.svg);
+    background-color: var(--green);
+    background-repeat: no-repeat;
+    height: 156px;
+    position: relative;
+}
+
+main {
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    align-items: center;
+    min-height: 85vh;
+    font-family: 'League Spartan', sans-serif;
+    padding-top: 80px;
+}
+
+hr {
+    display: none;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--box-bg);
+    border-radius: 5px;
+    padding: 32px 40px;
+    box-shadow: 0px  15px 25px -18px var(--green);
+}
+
+.col1__minicol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.col1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.col1__minicol__row1, .col1__minicol__row2, .col1__minicol__row3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col2 {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.col1__minicol__row1 {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+footer {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--bg);
+}
+
+footer p {
+    font-size: 1.8rem;
+    color: var(--green);
+}
+
+footer a {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: black;
+}
+
+/* special styles */
+
+.name {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.new {
+    background-color: var(--green);
+    border-radius: 12px;
+    color: var(--box-bg);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: calc(14rem/16);
+    line-height: caLc(14rem/16);
+    padding: 7px 8px 3px 8px;
+}
+
+.featured {
+    background-color: var(--dark-green);
+    border-radius: 12px;
+    color: var(--box-bg);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: calc(14rem/16);
+    line-height: caLc(14rem/16);
+    padding: 7px 8px 3px 8px;
+}
+
+.con--featured {
+    border-left: 5px solid var(--green);
+}
+
+.position {
+    font-weight: 700;
+    font-size: calc(22rem/16);
+    line-height: calc(24rem/16);
+    transition: .15s;
+}
+
+.position:hover {
+    color: var(--green);
+    transition: .15s;
+    cursor: pointer;
+}
+
+.description {
+    color: var(--green-text);
+    font-weight: 500;
+    font-size: calc(18rem/16);
+    line-height: calc(24rem/16);
+    letter-spacing: -0.14px;
+}
+
+.dot {
+    color: var(--green-text);
+}
+
+.btn {
+    border-radius: 3px;
+    background-color: var(--bg);
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: calc(24rem/16);
+    letter-spacing: -0.12px;
+    padding: 5px 9px 3px 9px;
+    border: none;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.btn:hover {
+    background-color: var(--green);
+    color: var(--bg);
+    transition: .15s;
+}
+
+/* ___________________MEDIA_____________________ */
+
+@media (max-width:1130px) {
+    main {
+        gap: 40px;
+    }
+
+    .container {
+        width: 90%;
+        padding-top: 32px;
+    }
+
+    .col1 {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .col1 img {
+        position: absolute;
+        inset: 0;
+        top: -55px;
+        width: 48px;
+    }
+
+    .col2 {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:750px) {
+    .container {
+        width: 85%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 24px 24px 24px;
+    }
+
+    hr {
+        display:block;
+        width: 100%;
+        height: 1px;
+        border: none;
+        background-color: #B7C4C4;
+        margin-top: 15px;
+        margin-bottom: 16px;
+    }
+
+    .col2 {
+        justify-content: flex-start;
+    }
+
+    /* font sizes  */
+
+    .name {
+        font-size: calc(13rem/16);
+        margin-right: 20%;
+    }
+
+    .new, .featured {
+        font-size: calc(14rem/16);
+        line-height: calc(14rem/16);
+    }
+
+    .position {
+        font-size: calc(15rem/16);
+        line-height: calc(24rem/16);
+    }
+
+    .description {
+        font-size: calc(16rem/16);
+        line-height: calc(24rem/16);
+    }
+
+}
+
+@media (max-width:400px) {
+    header {
+        background-image: url(images/bg-header-desktop.svg);
+    }
+}
+
+
+/* ############### JS TOGGLES ############# */
+
+.hide {
+    display: none;
+}
+
+.filter {
+    width: 80%;
+    min-height: 72px;
+    background-color: var(--box-bg);
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    bottom: -36px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 25px -18px var(--green);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.btnClear {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    line-height: calc(24rem/16);
+    letter-spacing: -0.12px;
+    font-weight: 700;
+    color: var(--green);
+    cursor: pointer;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filterList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* tag */
+
+.tag {
+    background-color: var(--bg);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close {
+    background-color: var(--green);
+    background-image: url(images/icon-remove.svg);
+    width: 32px;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    transition: .15s;
+}
+
+.close:hover {
+    background-color: var(--dark-green);
+    cursor: pointer;
+    transition: .15s;
+}
+
+.tagName {
+    color: var(--green);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: calc(24rem/16);
+    letter-spacing: -0.12px;
+    padding: 5px 8px 3px 8px;
+}
